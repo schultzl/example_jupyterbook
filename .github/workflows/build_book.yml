@@ -55,11 +55,16 @@ jobs:
           git push origin HEAD:main --force
           
       # Copy _build content to another branch
-      - name: copy built html files to docs/
+      - name: Copy built html files to docs/
         run: |
           mkdir docs
-          cp _build/html/* docs/*
+          cp _build/html/* docs/
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git add _build
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin HEAD:main --force
+
+      - name: Run the ghg-import command
+        run: |
+          ghp-import -n -p -f _build/html
+          jupyter-book build .
