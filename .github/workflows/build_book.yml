@@ -56,7 +56,7 @@ jobs:
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
-        uses: schultzl/example_jupyterbook@v3.6.1
+        uses: schultzl/example_jupyterbook
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
