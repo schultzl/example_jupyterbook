@@ -53,17 +53,14 @@ jobs:
           git add _build
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin HEAD:main --force
-          
-      # Copy _build content to another branch
-      - name: Copy built html files to docs/
-        run: |
-          mkdir docs
-          cp _build/html/* docs/
-          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-          git add _build
-          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-          git push origin HEAD:main --force
 
-      - name: Run the ghg-import command
-        run: |
-          ghp-import -n -p -f _build/html
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: schultzl/example_jupyterbook@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
+
+      #- name: Run the ghg-import command
+      #  run: |
+      #    ghp-import -n -p -f _build/html
