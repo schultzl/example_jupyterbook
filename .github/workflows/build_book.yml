@@ -48,8 +48,10 @@ jobs:
       # Commit and push _build
       - name: GIT Commit Build Artifacts (_build)
         run: |
-          mkdir _build
+          mkdir _build docs
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-          git add _build
+          git add _build docs
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin HEAD:main --force
+          
+      # Copy _build content to another branch
