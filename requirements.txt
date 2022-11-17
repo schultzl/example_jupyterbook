@@ -123,4 +123,4 @@ webencodings==0.5.1
 websocket-client==1.4.2
 widgetsnbextension==3.6.1
 zipp==3.10.0
-ghp-import
+ghp-import==2.1.0
