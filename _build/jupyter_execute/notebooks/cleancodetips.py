@@ -8,7 +8,7 @@
 # Self-taught programmers (as many scientific researchers are) have the additional challenge that they might not have learned a language in a structured way, where one goes through every step and slowly absorbs the coding etiquette. "Learning by doing" is a great way to acquire new skills, but it is hardly linear. Thus, there is a chance that some clean code concepts got lost along the way. The good news is that it is always a good idea to catch up on gaps that will make your code more professional and stable. Additionally, your collaborators will thank you.
 # 
 # <p align="center">
-# <img src="media/cleancode_monkeyuser.jpeg" alt="drawing" width="400"/>
+# <img src="../media/cleancode_monkeyuser.jpeg" alt="drawing" width="400"/>
 # </p>
 # 
 # In the following snippets, I list a couple of tips/rules to keep in mind while coding. Let me know if you're missing any so that I can complement. ;)
