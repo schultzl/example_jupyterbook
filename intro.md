@@ -72,11 +72,14 @@ SQL, NoSQL
 ::::
 
 ::::{grid-item-card}
-:::{button-ref} notebooks/cleancodetips
-:class: stretched-link
+:link: notebooks/cleancodetips
+:link-type: doc
+:class-header: bg-light
+
 Clean code refresher
-:::
+^^^
 clean code >> quick and dirty
+
 ::::
 
 ::::{grid-item-card}
