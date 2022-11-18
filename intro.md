@@ -33,28 +33,36 @@ to anyone out there - while demonstrating knowlegde of a technical tool (*wink*)
 :gutter: 3
 
 ::::{grid-item-card}
-:::{button-ref} orientation
-:class: stretched-link
+:link: orientation
+:link-type: doc
+:class-header: bg-light
+
 A way to pinpoint what's next
-:::
+^^^
 You can follow many paths. Here's how I determined mine.
+
 ::::
 
 ::::{grid-item-card}
-:::{button-ref} possibleprofessions
-:class: stretched-link
+:link: possibleprofessions
+:link-type: doc
+:class-header: bg-light
+
 Where can you go?
-:::
+^^^
 Possibilities if you worked with data sets or love technology. 
+
 ::::
 
 ::::{grid-item-card}
-:::{button-ref} stepstotransition
-:class: stretched-link
+:link: stepstotransition
+:link-type: doc
+:class-header: bg-light
+
 The transition
-:::
+^^^
 Prepare for what can be prepared for.
-::::
+
 :::::
 
 
@@ -64,11 +72,14 @@ Pythonic corner
 :gutter: 3
 
 ::::{grid-item-card}
-:::{button-ref} databasespy
-:class: stretched-link
+:link: databasespy
+:link-type: doc
+:class-header: bg-light
+
 Some words on databases
-:::
+^^^
 SQL, NoSQL
+
 ::::
 
 ::::{grid-item-card}
@@ -78,17 +89,25 @@ SQL, NoSQL
 
 Clean code refresher
 ^^^
-clean code >> quick and dirty
+clean code 
+\
+>> 
+\
+quick and dirty
 
 ::::
 
 ::::{grid-item-card}
-:::{button-ref} notebooks/oop
-:class: stretched-link
+:link: notebooks/oop
+:link-type: doc
+:class-header: bg-light
+
 Object-oriented programming (OOP)
-:::
+^^^
 Python is extremely powerful. Learn how to OOP properly to unleash its full capabilities.
+
 ::::
+
 :::::
 
 
