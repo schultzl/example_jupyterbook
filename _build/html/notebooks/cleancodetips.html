@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>clean code &gt;&gt; quick and dirty &#8212; Dr. Techies</title>
+    <title>&lt;no title&gt; &#8212; Dr. Techies</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../thisisme.html">
    About me
@@ -132,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../orientation.html">
    Where can you go?
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   clean code &gt;&gt; quick and dirty
   </a>
  </li>
  <li class="toctree-l1">
@@ -195,35 +190,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/schultzl/example_jupyterbook/master?urlpath=tree/docs/notebooks/cleancodetips.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -349,29 +315,7 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-conventions">
-   1# Naming conventions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#don-t-use-standalone-numbers-without-explanation">
-   2# Don’t use standalone numbers without explanation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#x-unit-tests">
-     X# Unit tests
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#x-use-git-for-version-history">
-     X# Use git for version history
-    </a>
-   </li>
-  </ul>
- </li>
+        <ul class="simple visible nav section-nav flex-column">
 </ul>
 
     </nav>
@@ -381,7 +325,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>clean code >> quick and dirty</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -390,29 +334,7 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-conventions">
-   1# Naming conventions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#don-t-use-standalone-numbers-without-explanation">
-   2# Don’t use standalone numbers without explanation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#x-unit-tests">
-     X# Unit tests
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#x-use-git-for-version-history">
-     X# Use git for version history
-    </a>
-   </li>
-  </ul>
- </li>
+                            <ul class="simple visible nav section-nav flex-column">
 </ul>
 
                         </nav>
@@ -423,142 +345,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="clean-code-quick-and-dirty">
-<h1>clean code &gt;&gt; quick and dirty<a class="headerlink" href="#clean-code-quick-and-dirty" title="Permalink to this headline">#</a></h1>
-<p>Especially under time pressure, it can be very tempting to solve a problem by quickly writing code without much care for its structure and reusability.</p>
-<p>Self-taught programmers (as many scientific researchers are) have the additional challenge that they might not have learned a language in a structured way, where one goes through every step and slowly absorbs the coding etiquette. “Learning by doing” is a great way to acquire new skills, but it is hardly linear. Thus, there is a chance that some clean code concepts got lost along the way. The good news is that it is always a good idea to catch up on gaps that will make your code more professional and stable. Additionally, your collaborators will thank you.</p>
-<p align="center">
-<img src="ipynb_media/cleancode_monkeyuser.jpeg" alt="drawing" width="400"/>
-</p>
-<p>In the following snippets, I list a couple of tips/rules to keep in mind while coding. Let me know if you’re missing any so that I can complement. ;)</p>
-<section id="naming-conventions">
-<h2>1# Naming conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">#</a></h2>
-<p>It’s a good idea to come up with a logical system to name different types of functions, files and folders as soon as you have a rough idea of how a project will look like and which building blocks it will entail. This way it will become easier to understand further down the line. Descriptive and easy to read names are preferred over ambiguous, short names.</p>
-<p>e.g.</p>
-<ul class="simple">
-<li><p>if naming files:</p></li>
-</ul>
-<p>✓ DO:     “2021-2022_inbound_transport_mywarehouse_mycompany.xlsx”</p>
-<p>✗ DON’T:  “transport updated new.xlsx”</p>
-<ul class="simple">
-<li><p>if naming variables:</p></li>
-</ul>
-<p>✓ DO:     “total_gross_weight_kg = 5034”</p>
-<p>✗ DON’T:  “tweight = 5034”</p>
-<ul class="simple">
-<li><p>additionally, be consistent with the wording:</p></li>
-</ul>
-<p>✓ DO:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gross_weight_kg</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="n">nett_weight_kg</span> <span class="o">=</span> <span class="mi">250</span>
-
-
-<span class="k">def</span> <span class="nf">fetch_incoming_products</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">variable</span><span class="p">):</span>
-    <span class="c1"># do something</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">fetch_outgoing_products</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">variable</span><span class="p">):</span>
-    <span class="c1"># do something</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>✗ DON’T:
-(note “kg” vs. “t” in variable names, as well as the inconcise wording “variable” and “var”)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gross_weight_kg</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="n">nett_weight_t</span> <span class="o">=</span> <span class="mi">250</span>
-
-
-<span class="k">def</span> <span class="nf">fetch_incoming_products</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
-    <span class="c1"># {function action}</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">fetch_outgoing_products</span><span class="p">(</span><span class="n">var</span><span class="p">):</span>
-    <span class="c1"># {function action}</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="don-t-use-standalone-numbers-without-explanation">
-<h2>2# Don’t use standalone numbers without explanation<a class="headerlink" href="#don-t-use-standalone-numbers-without-explanation" title="Permalink to this headline">#</a></h2>
-<p>At the moment you’re writting a piece of code, you’ll know exactly what you meant with a given number. However, there’s a risk that you’ll need that same number again in another section of the code. Instead of repeating yourself, it is better practice to allocate a variable for defining this number.</p>
-<p>✓ DO:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gravity_m_s2</span> <span class="o">=</span> <span class="mf">9.81</span>
-
-<span class="k">def</span> <span class="nf">calc_force_of_gravity</span><span class="p">(</span><span class="n">mass</span><span class="p">):</span>
-    <span class="n">force_of_gravity</span> <span class="o">=</span> <span class="n">mass</span> <span class="o">*</span> <span class="n">gravity_m_s2</span>
-    <span class="k">return</span> <span class="n">force_of_gravity</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>✗ DON’T:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_force_of_gravity</span><span class="p">(</span><span class="n">mass</span><span class="p">):</span>
-    <span class="n">force_of_gravity</span> <span class="o">=</span> <span class="n">mass</span> <span class="o">*</span> <span class="mf">9.81</span>
-    <span class="k">return</span> <span class="n">force_of_gravity</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>TO BE CONTINUED</p>
-<section id="x-unit-tests">
-<h3>X# Unit tests<a class="headerlink" href="#x-unit-tests" title="Permalink to this headline">#</a></h3>
-<p>A unit is a small, testable, part of a code. Further, unit tests verify that idependent parts of the code are working properly. They can be implemented by creating test cases which are used to verify the code.</p>
-<p>e.g. the function “sum_values”:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_values</span><span class="p">(</span><span class="n">values_list</span><span class="p">):</span>
-    <span class="n">total_sum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values_list</span><span class="p">:</span>
-        <span class="n">total_sum</span> <span class="o">+=</span> <span class="n">value</span>
-    <span class="k">return</span> <span class="n">total_sum</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>“sum_values” sums all values within a list. A unit test to check if this function works properly could be “test_sum”:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="n">test_values</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">sum_values</span><span class="p">(</span><span class="n">test_values</span><span class="p">)</span> <span class="o">==</span> <span class="nb">sum</span><span class="p">(</span><span class="n">test_values</span><span class="p">),</span><span class="sa">f</span><span class="s2">&quot;Sum should be: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">test_values</span><span class="p">)</span><span class="si">}</span><span class="s2">, got: </span><span class="si">{</span><span class="n">sum_values</span><span class="p">(</span><span class="n">test_values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;passed test_sum!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>… and then use it for testing!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">]</span>
-<span class="n">test_sum</span><span class="p">(</span><span class="n">test_values</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>passed test_sum!
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="x-use-git-for-version-history">
-<h3>X# Use git for version history<a class="headerlink" href="#x-use-git-for-version-history" title="Permalink to this headline">#</a></h3>
-<p>It is common that features get updated, improved, and methods can be re-written. To eliminate the need of commenting out old code and replacing it by a new version, which would likely become confusing at some point, I really recommend using a version control system (e.g. git) to keep track of versions of your code and documents.</p>
-</section>
-</section>
-</section>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
