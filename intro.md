@@ -72,7 +72,7 @@ SQL, NoSQL
 ::::
 
 ::::{grid-item-card}
-:::{button-ref} cleancodetips
+:::{button-ref} notebooks/cleancodetips
 :class: stretched-link
 Clean code refresher
 :::
@@ -80,7 +80,7 @@ clean code >> quick and dirty
 ::::
 
 ::::{grid-item-card}
-:::{button-ref} oop
+:::{button-ref} notebooks/oop
 :class: stretched-link
 Object-oriented programming (OOP)
 :::
