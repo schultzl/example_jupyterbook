@@ -12,15 +12,12 @@ the years on the topic of transitioning from academia to the private sector as a
 many times which steps I followed and what I find most relevant... so now I decided to write 
 it up in a concise way.
 
----
-**NOTE**
-
+```{note}
 I'm neither a coach, nor a career expert. This document is clearly not career advice.
 You're encouraged to read this document for entertainment purposes, and take it
 as food for thought. Still, it is your responsibility do your own research before 
 you derive any conclusions. 
-
----
+```
 
 To be completely transparent, I'm also using the opportunity to showcase GitHub Actions and
 [Jupyter Book](https://jupyterbook.org/en/stable/intro.html), the latter being an open source tool
