@@ -1,0 +1,66 @@
+name: deploy-site
+
+# Only run this when the main branch changes
+on:
+  push:
+    branches:
+    - main
+    # Ignore changes in folders that are affected by the auto commit. (Node.js project)
+    paths-ignore: 
+      - '_build/**'
+  pull_request:
+  workflow_dispatch:
+  release:
+
+# This job installs dependencies, builds the book as html
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env: 
+      CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
+      CI_COMMIT_AUTHOR: schultzl
+      
+    if: github.repository == 'schultzl/example_jupyterbook'
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - uses: actions/checkout@v3
+
+      # Install dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      # Build the book
+      - name: Build the book
+        run: |
+          jupyter-book build .
+          
+      # Commit and push _build
+      - name: GIT Commit Build Artifacts (_build)
+        run: |
+          mkdir -p _build
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git add _build
+          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push origin HEAD:main --force
+
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/html
+
+      #- name: Run the ghg-import command
+      #  run: |
+      #    ghp-import -n -p -f _build/html
