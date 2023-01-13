@@ -40,6 +40,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          
+          
       # Build the book
       - name: Build the book
         run: |
@@ -48,7 +50,8 @@ jobs:
       # Commit and push _build
       - name: GIT Commit Build Artifacts (_build)
         run: |
-          mkdir _build
+          
+          mkdir -p _build
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git add _build
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
