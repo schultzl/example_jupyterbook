@@ -37,7 +37,7 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git rm -r _build
           git commit . -m "Remove duplicated directory"
-          git push origin main:schultzl-mkdir --force
+          git push origin schultzl-mkdir --force
 
       # Install dependencies
       - name: Set up Python
