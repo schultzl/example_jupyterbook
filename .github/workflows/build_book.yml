@@ -48,7 +48,7 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git rm -r _build
           git commit . -m "Remove duplicated directory"
-          git push origin HEAD:main --force
+          git push schultzl-mkdir
           
       # Build the book
       - name: Build the book
@@ -63,7 +63,7 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git add _build
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-          git push origin HEAD:main --force
+          git push schultzl-mkdir
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
