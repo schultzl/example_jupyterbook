@@ -54,8 +54,8 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git add _build
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-          git branch
-          git push -u origin schultzl-mkdir --force
+          echo "this is branch: ${GITHUB_REF##*/}"
+          git push -u origin ${GITHUB_REF##*/} --force
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
