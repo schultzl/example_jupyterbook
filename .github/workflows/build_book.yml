@@ -4,7 +4,8 @@ name: deploy-site
 on:
   push:
     branches:
-    - main
+    #- main
+    - schultzl-mkdir
     # Ignore changes in folders that are affected by the auto commit. (Node.js project)
     paths-ignore: 
       - '_build/**'
