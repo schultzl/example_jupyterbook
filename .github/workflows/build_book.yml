@@ -42,6 +42,14 @@ jobs:
           pip install -r requirements.txt
           
           
+      # Remove _build from repo
+      - name: Remove _build
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git rm -r _build
+          git commit . -m "Remove duplicated directory"
+          git push origin HEAD:main --force
+          
       # Build the book
       - name: Build the book
         run: |
@@ -50,8 +58,8 @@ jobs:
       # Commit and push _build
       - name: GIT Commit Build Artifacts (_build)
         run: |
-          
-          mkdir -p _build
+  
+          mkdir _build
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git add _build
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
