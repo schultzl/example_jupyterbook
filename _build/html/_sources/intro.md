@@ -15,7 +15,7 @@ it up in a concise way.
 ```{note}
 I'm neither a coach, nor a career expert. This document is clearly not career advice.
 You're encouraged to read this document for entertainment purposes, and take it
-as food for thought. Still, it is your responsibility do your own research before 
+as food for thought. Still, it is your responsibility to do your own research before 
 you derive any conclusions. 
 ```
 
