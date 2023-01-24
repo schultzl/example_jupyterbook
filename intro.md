@@ -58,7 +58,7 @@ Possibilities if you worked with data sets or love technology.
 
 Where can you apply?
 ^^^
-Job portals, company websites and social media
+On job portals, company websites and social media
 
 :::::
 
