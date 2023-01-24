@@ -14,7 +14,7 @@ Take some time to reflect on your skills, including what you enjoy doing, what y
 - **Review your CV** \
 Since academia and industry have broadly different foci, you'll most likely need to adjust the wording and highlights of your CV for the transition. For example, your research articles are not as relevant in industry as they are in science. In my experience, it helps to be as concise and to the point as possible in your industry-ready CV. I mostly aim to keep it just 1 page long with the most relevant information to the position and company I'm applying to. Inevitably, to reach this, I omit my publications from it. While it feels a bit disappointing at first (hello, dear ego), there might be a chance here and there to mention one thing or two about them during the interviews - but don't overdo it, otherwise the interviewers might assume you're attached to academia and don't really want a job in industry.
 
-You can find some tips on how to convert your CV for the private sector [here](https://postdocs.mit.edu/document/convert-cv-resume-industry-2018-01-23) (MIT Career Development tips), which is a source I found particularly helpful when working towards transitioning.
+     You can find some tips on how to convert your CV for the private sector [here](https://postdocs.mit.edu/document/convert-cv-resume-industry-2018-01-23) (MIT Career Development tips), which is a source I found particularly helpful when working towards transitioning.
 
 
 - **Review/learn some key concepts** \
