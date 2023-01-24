@@ -8,6 +8,7 @@ chapters:
 - file: stepstotransition
 - file: whytransition
 - file: orientation
+- file: wheretoapply
 - file: notebooks/cleancodetips
 - file: databasespy
 - file: notebooks/oop

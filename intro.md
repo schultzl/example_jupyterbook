@@ -30,18 +30,18 @@ to anyone out there - while demonstrating knowlegde of a technical tool (*wink*)
 :gutter: 3
 
 ::::{grid-item-card}
-:link: orientation
+:link: stepstotransition
 :link-type: doc
 :class-header: bg-light
 
-A way to pinpoint what's next
+The transition
 ^^^
-You can follow many paths. Here's how I determined mine.
+Prepare for what can be prepared for.
 
 ::::
 
 ::::{grid-item-card}
-:link: possibleprofessions
+:link: orientation
 :link-type: doc
 :class-header: bg-light
 
@@ -52,13 +52,13 @@ Possibilities if you worked with data sets or love technology.
 ::::
 
 ::::{grid-item-card}
-:link: stepstotransition
+:link: wheretoapply
 :link-type: doc
 :class-header: bg-light
 
-The transition
+Where can you apply?
 ^^^
-Prepare for what can be prepared for.
+Job portals, company websites and social media
 
 :::::
 
