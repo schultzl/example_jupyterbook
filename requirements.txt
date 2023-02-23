@@ -48,7 +48,7 @@ jupyterlab_server==2.16.3
 latexcodec==2.0.1
 linkify-it-py==1.0.3
 lxml==4.9.1
-markdown-it-py==1.1.0
+markdown-it-py==2.2.0
 MarkupSafe==2.1.1
 matplotlib-inline==0.1.6
 mdit-py-plugins==0.2.8
